@@ -1,0 +1,46 @@
+DLCManager gen2 init settings:
+init args:
+    dirToDownloadPacks: C:/Users/Cpymka/Documents/packs/
+    urlToServerSuperpack: http://cdn-ptl-static-2.tanksblitz.ru/tb-static/dlc/dc_12.4.0_1_340077_dx11_ruby_apple.dvpm
+init hints:
+    username: 
+    password: 
+    svnRevision: 
+    logFilePath: ~doc:/dlc_manager.log
+    preloadedPacks: 
+    localPacksDB: 
+    limitRequestUpdateIterationUs: 500
+    maxLogFiles: 10
+    maxSameErrorCounter: 10
+    retryConnectMilliseconds: 5000
+    downloader: 0000000000000000
+    maxFilesToDownload: 0
+    timeoutForDownload: 60
+    timeoutForInitialization: 60
+    skipCDNConnectAfterAttempts: 3
+    downloaderMaxHandles: 4
+    downloaderChunkBufSize: 524288
+    profilerSamplerCounts: 2048
+    fireSignalsInBackground: 1
+    validateLocalPacksFiles: 0
+current_device_gpu: dx11
+pack gfx_ui requested
+pack gfx_ui queued
+generated range: packs [1306], files [24279], start pos 13257640, size 3134
+pack general_pack requested
+pack general_pack queued
+pack gfx_ui downloaded
+pack general_pack downloaded
+pack extended_pack requested
+pack gfx2_ui queued
+pack extended_pack queued
+generated range: packs [1207], files [19648], start pos 3620880, size 6700
+generated range: packs [1207], files [21731-22788], start pos 3627580, size 9630060
+pack extended_pack requested
+pack gfx2_ui downloaded
+pack extended_pack downloaded
+set requesting enabled: false
+active ranges have been dropped, files progress has been reset
+set requesting enabled: true
+set requesting enabled: false
+active ranges have been dropped, files progress has been reset
