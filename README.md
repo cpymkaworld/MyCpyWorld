@@ -11,3 +11,6 @@ http://mycpyworld.lunaweb.ru/videoa9cbb1c6c277663865c497599b6eacf8.html
 
 MY Steam
 https://steamcommunity.com/id/MyCpymkaWorld/
+
+minecraft
+http://mycpyworld.lunaweb.ru/minecraftb1.7.3.html
