@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        .error-screen, .music-screen { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #333; color: white; text-align: center; }
+        .error-screen button, .music-screen button { margin-top: 20px; padding: 10px 20px; background: #6b70ff; color: white; border: none; cursor: pointer; font-size: 16px; }
+        .music-screen { display: none; }
+        .music-screen img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="error-screen" onclick="showMusicScreen()">
+        <h1>Произошла ошибка, попробуйте перезагрузить сайт</h1>
+        <button>Перезагрузить</button>
+    </div>
+    
+    <div class="music-screen">
+        <img src="image.jpg" alt="Фото">
+        <button>🔇 Заглушить</button>
+        <audio id="music" src="music.mp3" autoplay loop></audio>
+    </div>
+    
+    <script>
+        function showMusicScreen() {
+            document.querySelector('.error-screen').style.display = 'none';
+            document.querySelector('.music-screen').style.display = 'flex';
+            document.getElementById('music').play();
+            openFullScreen();
+        }
+
+        function openFullScreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = 'Вы уверены, что хотите покинуть страницу?';
+        });
+    </script>
+</body>
+</html>
